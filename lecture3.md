@@ -110,4 +110,51 @@ _Taken from weather.arff_
   - **Breakpoint:** 77.5
     - If temp <= 77.5, then yes
     - If temp >  77.5, then no
-  
+
+## Simple Statistical Modelling
+
+  - Uses all attributes
+  - Assumes the following:
+    - Attributes are equally important
+    - Attributes are statistically independent (given class value) - never correct lmao
+
+### Naive Bayes
+
+  - For each attribute, consider how often attribute has given value
+    - e.g. from weather data
+      - outlook = sunny when play = yes, 2 times
+      - outlook = sunny when play = no , 3 times
+      - outlook = overcast when play = yes, 4 times
+      - ...
+    - For all attributes
+
+### Bayes' Rule
+
+  - Probability of an event (hypothesis) H given evidence E
+    - Basically multiply all probabilities together
+    - e.g. Predict class of a sunny, hot, high, windy day
+      - P(sunny | yes) * P(hot | yes) * P(high | yes) * P(windy | yes) * P(yes)
+      - Then find P(no) add together and find overall probability
+
+### Zero Frequency Problem
+
+  - Happens when theres 0 frequency for one event
+    - Causes calculation to turn out to 0 or 1
+  - Fix by adding Laplace Estimator to every instance (usually 1)
+
+### Missing Values
+
+  - Just skip it during calculations lol
+
+## Constructing Decision Trees
+
+  - Strategy: top-down
+    - Recursive divide and conquer fashion
+  - First: select attribute for root node
+    - Create branch for each possible value
+  - Split instances into subsets
+    - One for each branch extending into node
+  - Repeat recursively for each branch using instances that only reach the branch
+  - If all instances have the same class for that branch stop developing that part of the tree
+
+  - Add some example here blah
