@@ -4,9 +4,9 @@
   - Popular alternative to decision trees
   - **Antecedent (Pre-condition):** a series of tests (e.g. tests at the nodes of decision tree)
   - Test are usually ANDed together (may be general logic expressions)
-  - **Consequence (Conclusion):** classes, set of classes, or probability distribution assiged by rule
+  - **Consequence (Conclusion):** classes, set of classes, or probability distribution assigned by rule
   - Individual rules are often logically ORed together
-    - Conflcits arise if different conclusions apply
+    - Conflicts arise if different conclusions apply
   - e.g. If outlook = sunny and humidity = hight then play = no
 
 ## Converting Tree to Rules
